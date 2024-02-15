@@ -1,0 +1,104 @@
+@import "scss/utils";
+
+.swiper_layout {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  padding-left: 78px;
+  margin: 56px 0 104px 0;
+  @include laptopWidth {
+    padding-left: 60px;
+  }
+  @include bigTablet {
+    padding-left: 40px;
+  }
+  @include phoneOrTablet {
+    padding-left: 0;
+    margin-bottom: 78px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  :global {
+    @include phone {
+      .swiper-slide {
+        width: auto;
+      }
+    }
+  }
+}
+
+.swiper_title {
+  display: none;
+  @include phoneOrTablet {
+    display: initial;
+    width: 100%;
+    text-align: left;
+    border-bottom: 1px solid #C7CDD9;
+    margin-bottom: 40px;
+    & h2 {
+      @include PT_SANSBold(18px);
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.swiper_card {
+  height: 135px;
+  max-width: 400px;
+  @include phone {
+    min-width: 200px;
+    max-width: 200px;
+  }
+}
+
+.swiper_card_title {
+  @include PT_SANSRegular(25px);
+  color: #3877EE;
+  margin-bottom: 15px;
+  @include phoneOrTablet {
+    font-size: 20px;
+  }
+  @include phone {
+    font-size: 16px;
+  }
+}
+
+.swiper_card_description {
+  @include PT_SANSRegular(20px, 1px, 30px);
+  color: #42567A;
+  @include phoneOrTablet {
+    font-size: 18px;
+  }
+  @include phone {
+    line-height: 145%;
+    font-size: 14px;
+  }
+}
+
+.swiper_arrow_right {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 40px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: .2s all ease-in-out;
+  & svg {
+    height: 11px;
+    width: 7px;
+    color: #3877EE;
+  }
+  &:hover {
+    border: 1px solid #3C80FF;
+    & svg {
+      color: #3C80FF;
+    }
+  }
+  @include phoneOrTablet {
+    display: none;
+  }
+}

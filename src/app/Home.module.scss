@@ -1,0 +1,85 @@
+@import "scss/utils";
+
+.body {
+  & > hr {
+    width: 1px;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    background-color: #42567A;
+    opacity: 0.1;
+    @include phoneOrTablet {
+      display: none;
+    }
+  }
+}
+
+.main_layout {
+  height: max-content;
+  @include fixedWidth;
+  border: solid transparentize(rgb(66, 86, 122), 0.9);
+  border-width: 0 1px 0;
+  padding-top: 170px;
+  overflow: hidden;
+  @include laptopWidth {
+    padding-top: 100px;
+  }
+  @include thousandTwoWidth {
+    padding-top: 70px;
+  }
+  @include phoneOrTablet {
+    border: none;
+    padding-top: 60px;
+  }
+}
+
+.main_title_wrapper {
+  position: relative;
+  padding-left: 78px;
+
+  @include laptopWidth {
+    padding-left: 60px;
+  }
+  @include bigTablet {
+    padding-left: 40px;
+  }
+  @include phoneOrTablet {
+    padding-left: 0;
+    margin-bottom: 56px;
+  }
+  &:after {
+    content: "";
+    height: 100%;
+    width: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(to left,
+                    rgb(56, 119, 238),
+                    rgb(239, 93, 168));
+    @include thousandTwoWidth {
+      width: 4px;
+    }
+    @include phoneOrTablet {
+      display: none;
+    }
+  }
+}
+
+.main_title {
+  @include PT_SANSBold(56px, 0%, 120%);
+  color: rgb(66, 86, 122);
+  @include thousandTwoWidth {
+    font-size: 40px;
+  }
+  @include bigTablet {
+    font-size: 32px;
+  }
+  @include phoneOrTablet {
+    font-size: 28px;
+  }
+  @include phone {
+    font-size: 20px;
+  }
+}

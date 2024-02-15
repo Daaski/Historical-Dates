@@ -1,0 +1,86 @@
+@import "scss/utils";
+
+.range_wrapper {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 100px;
+  @include laptopWidth {
+    column-gap: 90px;
+  }
+  @include thousandTwoWidth {
+    column-gap: 80px;
+  }
+  @include bigTablet {
+    column-gap: 60px;
+  }
+  @include phoneOrTablet {
+    position: relative;
+  }
+  @include phone {
+    width: 100%;
+    column-gap: 20px;
+    justify-content: space-around;
+  }
+}
+
+.default {
+  @include PT_SANSBold(200px);
+  position: relative;
+  height: 180px;
+  display: flex;
+  column-gap: 1px;
+  overflow: hidden;
+  @include laptopWidth {
+    font-size: 180px;
+    height: 180px;
+  }
+  @include thousandTwoWidth {
+    font-size: 160px;
+    height: 170px;
+  }
+  @include bigTablet {
+    font-size: 140px;
+    height: 160px;
+  }
+  @include phoneOrTablet {
+    font-size: 86px;
+    height: auto;
+  }
+  @include phone {
+      font-size: 56px;
+  }
+}
+
+.range_start {
+  color: #5D5FEF;
+  @extend .default
+}
+
+.range_end {
+  color: #EF5DA8;
+  @extend .default
+}
+
+.digit {
+  height: 200px;
+  @include phoneOrTablet {
+    height: 80px
+  }
+  @include phone {
+    height: 60px;
+  }
+  position: relative;
+  width: 1ch;
+  font-variant-numeric: tabular-nums;
+}
+
+.number {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -5;
+}
