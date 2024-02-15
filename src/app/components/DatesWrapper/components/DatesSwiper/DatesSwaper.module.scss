@@ -27,6 +27,15 @@
   }
 }
 
+.swiper {
+  width: 100%;
+  position: relative;
+  padding: 0 70px 0 0;
+  @include phoneOrTablet {
+    padding-right: 0;
+  }
+}
+
 .swiper_title {
   display: none;
   @include phoneOrTablet {
@@ -44,7 +53,7 @@
 
 .swiper_card {
   height: 135px;
-  max-width: 400px;
+  max-width: 350px;
   @include phone {
     min-width: 200px;
     max-width: 200px;
@@ -78,6 +87,9 @@
 .swiper_arrow_right {
   min-width: 40px;
   height: 40px;
+  position: absolute;
+  right: 0;
+  top: 35%;
   display: flex;
   align-items: center;
   justify-content: center;

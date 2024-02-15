@@ -49,9 +49,11 @@ export const DatesCircle = () => {
         rotateToDefault(value, selectedRange, circleWrapperRef, dots);
     };
 
+    console.log(tabletBreak)
+
     return (
         <div className={scss.dates_circle_layout}>
-            {typeof document !== 'undefined' &&
+            {
                 createPortal(
                     <hr
                         style={{

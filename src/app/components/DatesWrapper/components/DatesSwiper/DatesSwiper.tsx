@@ -43,7 +43,7 @@ export const DatesSwiper = () => {
             >
                 <h2>{selectedRange.title}</h2>
             </motion.div>
-            <div style={{ width: '100%' }}>
+            <div className={scss.swiper}>
                 <Swiper
                     breakpoints={{
                         300: {
@@ -73,12 +73,12 @@ export const DatesSwiper = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </div>
-            <div
-                onClick={() => swiperRef.current?.slideNext()}
-                className={scss.swiper_arrow_right}
-            >
-                <ArrowSvg />
+                <div
+                    onClick={() => swiperRef.current?.slideNext()}
+                    className={scss.swiper_arrow_right}
+                >
+                    <ArrowSvg />
+                </div>
             </div>
         </motion.div>
     );
