@@ -53,7 +53,7 @@ export const DatesCircle = () => {
 
     return (
         <div className={scss.dates_circle_layout}>
-            {
+            {typeof window !== 'undefined' &&
                 createPortal(
                     <hr
                         style={{
